@@ -32,7 +32,7 @@
 			echo "<td>".$row['school_type']."</td>";
 			echo "<td>".$row['school_name']."</td>";
 			echo "<td>".$row['standard']."</td>";
-			echo "<td>".$row['grade']."</td>";	
+			echo "<td>".$row['grade']."</td>";
 			echo "</tr>";
 		}
 		echo "</table>";

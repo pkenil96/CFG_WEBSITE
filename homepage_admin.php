@@ -12,8 +12,6 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>Reaching hands</title>
-
-
     <style type="text/css">
       #main{
         margin-top: 0px;
@@ -25,6 +23,9 @@
 
       label{
         margin-right: 10px;
+      }
+
+      body{
       }
 
     </style>
@@ -47,6 +48,11 @@
               <li><a id="btn-four">Monthly Report</a></li>
               <li><a id="btn-five">Add/Remove students</a></li>
             </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a id="logout">Logout</a></li>
+            </ul>
+
           </div>
       </nav>
     <div id="main-content" style="width:100%; height:auto; margin-left:50px; margin-top:20px;">
@@ -74,18 +80,36 @@
     });
 
     $('#btn-five').click(function(){
-      $('#main-content').html('<h3><label>Enter name</label><input type="text" placeholder="Enter Name" name="name"><br><br><label>Enter Age</label><input type="text" placeholder="Enter Age" name="age"><br><br><label>Choose Gender</label><select name="gender"><option value="Boy">Boy</option><option value="Girl">Girl</option></select><br><br><label>Choose School-type</label><select name="school_type"><option value="Home-school">Home-school</option><option value="Private">Private</option></select><br><br><label>Enter School-name</label><input type="text" placeholder="School name" name="school_name"><br><br><label>Choose Standard</label><input type="text" placeholder="Standard"><br><br><label>Enter grades</label><input type="text" placeholder="Grade" name="grade"></h3><br><button type="button" class="btn btn-success" onclick="add_child()">Add child</button>&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary" onclick="reset()">Reset</button>');
+      $('#main-content').load('./add_child_form.php');
+    });
+
+    $('#logout').click(function(){
+      window.location.href = './index.php';
     });
 
     function add_child(){
-      var name1=document.getElementsByName('name').value;
-      var age1=document.getElementsByName('age').value;
+      var name1 = $('#add_child_name').val();
+      var age1 = $('#age_child').val();
+      var gender1 = $('#gender').val();
+      var school_type1 = $('#school_type').val();
+      var school_name1 = $('#school_name').val();
+      var standard1 = $('#standard').val();
+      var grade1 = $('#grade').val();
+      
       $.ajax({
         type: "POST",
-        url: "./add_child.php",
+        url: "add_child.php",
         data: {
           name: name1,
-          age: age1
+          age: age1,
+          gender: gender1,
+          school_type: school_type1,
+          school_name: school_name1,
+          standard: standard1,
+          grade: grade1
+        },
+        success: function(){
+          $('#add_child_msg').html('<h1>Added</h1>');
         }
       });
     }

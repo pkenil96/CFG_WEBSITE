@@ -24,7 +24,8 @@
 			echo "<td>".$row['item_name']."</td>";
 			echo "<td>".$row['item_type']."</td>";
 			echo "<td>".$row['current_count']."</td>";	
-			echo "<td>".$row['threshold_count']."</td>";	
+			echo "<td>".$row['threshold_count']."</td>";
+			echo "<td><a class='btn btn-danger' target='#'>Remove Item</a></td>";		
 			echo "</tr>";
 		}
 		echo "</table>";

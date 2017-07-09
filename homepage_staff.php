@@ -12,8 +12,6 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>Reaching hands</title>
-
-
     <style type="text/css">
       #main{
         margin-top: 0px;
@@ -41,6 +39,10 @@
               <li><a id="btn-three">View Staff</a></li>
               <li><a id="btn-four">Monthly Report</a></li>
             </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a id="logout">Logout</a></li>
+            </ul>
           </div>
       </nav>
     <div id="main-content" style="width:100%; height:auto; margin-left:50px; margin-top:20px;">
@@ -64,6 +66,11 @@
     $('#btn-three').click(function(){
       $('#main-content').load('./staff.php');
     });
+
+    $('#logout').click(function(){
+      window.location.href = './index.php';
+    });
+
 </script>
 
 
