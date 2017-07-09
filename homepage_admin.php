@@ -101,7 +101,7 @@
       
       $.ajax({
         type: "POST",
-        url: "add_child.php",
+        url: "./add_child.php",
         data: {
           name: name1,
           age: age1,
