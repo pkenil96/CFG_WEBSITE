@@ -18,6 +18,16 @@
       #jumbotron-header{
         margin-bottom: 0px;
       }
+
+      a{
+        cursor: pointer;
+      }
+
+      
+      img{
+        width: 80%;
+        height: 80%;
+      }
     </style>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -29,7 +39,7 @@
       <nav class="navbar navbar-inverse">
           <div class="container-fluid">
             <div class="navbar-header">
-              <a class="navbar-brand" href="#">Reaching Hands</a>
+              <img src="img.png" alt="logo" align="left" float="left">
             </div>
             <ul class="nav navbar-nav">
               <li><a id="btn-one">View Inventory</a></li>
