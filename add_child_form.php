@@ -1,4 +1,4 @@
-<div id="add_child_msg"></div>
+<h5><div id="add_child_msg"></div></h5>
 <h3>
 <label>Enter name</label>
 <input type="text" placeholder="Enter Name" id ='add_child_name' name="name"><br><br>

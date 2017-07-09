@@ -29,24 +29,21 @@
  </head>
 
   <body>
-
     <div class="jumbotron" id="jumbotron-header">
       <img src="img.png" alt="logo" align="left" float="left">
     </div>
 
     <div class="container" id="main">    
-        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
-          
-          <div class="panel panel-info" >
-            <div class="panel-heading">
-              <div class="panel-title">Sign In</div>
-              <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
-            </div>     
+      <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                            
+        <div class="panel panel-info" >
+          <div class="panel-heading">
+            <div class="panel-title">Sign In</div>
+            <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a>
+            </div>
+          </div>     
 
-      <div style="padding-top:30px" class="panel-body" >
-        
-      </div>
-      <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+          <div style="padding-top:30px" class="panel-body"></div>
+          <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
                             
         <form method="POST" action="login.php" id="loginform" class="form-horizontal" role="form">
           <div style="margin-bottom: 25px" class="input-group">
@@ -74,32 +71,27 @@
           </div>                                
         </form>  
       </div>  
-
-        </div>  
-        </div>
-      </div>
+    </div>  
+  </div>
+</div>
         
 
-    <script type="text/javascript">
-      function login(){
-          var uname=document.getElementById('login-username').value;
-          var pass=document.getElementById('login-password').value;
+<script type="text/javascript">
+  function login(){
+    var uname=document.getElementById('login-username').value;
+    var pass=document.getElementById('login-password').value;
 
-          if(uname.length==0 || pass.length==0){
-            alert("Username or Password cannot be blank!");
-            return false;
-          }
+      if(uname.length==0 || pass.length==0){
+        alert("Username or Password cannot be blank!");
+        return false;
+      }
 
           //return true;
-      }  
+  }  
     </script>
     <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    
-   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-   
-<!-- Latest compiled and minified JavaScript -->
+    ================================================== -->    
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>   
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
-  </body>
+</body>
 </html>
